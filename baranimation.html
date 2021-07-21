@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar animation</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 35px;
+            background-color: rgb(184, 205, 245);
+            border-radius: 30px;
+        }
+
+        .movingbar {
+            width: 150px;
+            height: 35px;
+            background-color: rgb(0, 120, 218);
+            border-radius: 30px;
+            animation: 채수민메롱 1.5s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes 채수민메롱 {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                background-color: rgb(28, 130, 214);
+            }
+            50% {
+                width: 150px;
+                background-color: rgb(61, 142, 207);
+            }
+            75% {
+                background-color: rgb(28, 130, 214);
+            }
+            100% {
+                transform: translateX(450px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="movingbar"></div>
+    </div>
+</body>
+</html>
